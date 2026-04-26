@@ -184,23 +184,23 @@ function drawText(elapsed, alpha_override) {
   ctx.shadowBlur = 30;
 
   // Label
-  ctx.font = '500 15px -apple-system, "Helvetica Neue", sans-serif';
+  ctx.font = '500 20px -apple-system, "Helvetica Neue", sans-serif';
   ctx.fillStyle = 'rgba(255,255,255,0.6)';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
   ctx.fillText(s.label, px, py);
 
   // Headline
-  ctx.font = 'bold 96px -apple-system, "Helvetica Neue", sans-serif';
+  ctx.font = 'bold 130px -apple-system, "Helvetica Neue", sans-serif';
   ctx.fillStyle = '#ffffff';
-  ctx.fillText(s.h1, px, py + 28);
-  ctx.fillText(s.h2, px, py + 128);
+  ctx.fillText(s.h1, px, py + 32);
+  ctx.fillText(s.h2, px, py + 168);
 
   // Body
   ctx.shadowBlur = 0;
-  ctx.font = '400 20px -apple-system, "Helvetica Neue", sans-serif';
+  ctx.font = '400 26px -apple-system, "Helvetica Neue", sans-serif';
   ctx.fillStyle = 'rgba(255,255,255,0.78)';
-  s.body.split('\n').forEach((line, i) => ctx.fillText(line, px, py + 240 + i * 28));
+  s.body.split('\n').forEach((line, i) => ctx.fillText(line, px, py + 310 + i * 36));
 
   ctx.restore();
 }
